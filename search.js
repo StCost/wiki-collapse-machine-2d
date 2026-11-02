@@ -55,3 +55,14 @@ if (box) {
   });
 }
 document.addEventListener("click", (ev) => { if (form && !form.contains(ev.target)) hits.innerHTML = ""; });
+document.querySelectorAll(".sort").forEach(btn => btn.addEventListener("click", () => {
+  const list = document.querySelector(".index");
+  if (!list) return;
+  document.querySelectorAll(".sort").forEach(b => b.classList.toggle("on", b === btn));
+  const key = btn.dataset.key;
+  const items = [...list.children];
+  items.sort((a, b) => key === "name"
+    ? a.dataset.name.localeCompare(b.dataset.name)
+    : Number(b.dataset.stat) - Number(a.dataset.stat));
+  items.forEach(li => list.appendChild(li));
+}));
