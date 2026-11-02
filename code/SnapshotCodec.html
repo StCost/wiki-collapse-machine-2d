@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapshotCodec — COLLAPSE MACHINE 2D</title>
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Collapse Machine 2D</a>
+  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+</header>
+<main class="sheet">
+  <h1>SnapshotCodec</h1>
+  <p class="path">src/DustConvoy.Sim/Net/SnapshotCodec.cs</p><h2>Constants</h2><table><tr><th>Name</th><th>Value</th><th></th></tr><tr><td><code>PosStep</code></td><td><code>1f / 32f; // 32 px = 1 m: one pixel of position precision /// &lt;summary&gt;Trucks farther than this from the peer are left out of the pose packet. Convoy trucks and driven trucks always go.&lt;/summary&gt; public const float MotionRadius = 96f</code></td><td></td></tr><tr><td><code>LocationSendDistance</code></td><td><code>260f</code></td><td>Locations this far from every player are sent as empty placeholders (indices must line up with the host&#x27;s list).</td></tr><tr><td><code>ChatResendSeconds</code></td><td><code>1.0</code></td><td>Chat lines ride along for this long after they are said (~30 snapshots), so a dropped packet loses nothing.</td></tr><tr><td><code>ChatBytesPerSnapshot</code></td><td><code>320</code></td><td>Text budget per snapshot: the full snapshot must stay inside one packet. Recent lines rotate through it.</td></tr><tr><td><code>PropsPerSnapshot</code></td><td><code>12</code></td><td>Prop entries per full snapshot; the full snapshot must stay inside one packet.</td></tr><tr><td><code>FxSounds</code></td><td><code>8</code></td><td></td></tr><tr><td><code>FxTracers</code></td><td><code>12</code></td><td></td></tr><tr><td><code>FxHits</code></td><td><code>8</code></td><td></td></tr><tr><td><code>FxGore</code></td><td><code>4</code></td><td></td></tr><tr><td><code>OwnedPoseTag</code></td><td><code>0xA5</code></td><td></td></tr></table>
+</main>
+<script src="../search.js"></script>
+</body>
+</html>

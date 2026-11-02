@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PickupSystem — COLLAPSE MACHINE 2D</title>
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Collapse Machine 2D</a>
+  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+</header>
+<main class="sheet">
+  <h1>PickupSystem</h1>
+  <p class="path">src/DustConvoy.Sim/Systems/PickupSystem.cs</p><h2>Constants</h2><table><tr><th>Name</th><th>Value</th><th></th></tr><tr><td><code>MaxCans</code></td><td><code>16</code></td><td></td></tr><tr><td><code>PawnPickupRadius</code></td><td><code>0.8f</code></td><td></td></tr><tr><td><code>SpillChance</code></td><td><code>0.75f</code></td><td></td></tr><tr><td><code>CanAmount</code></td><td><code>8f</code></td><td></td></tr><tr><td><code>CanFlingSpeedMin</code></td><td><code>6f</code></td><td>Cans flung out of a wreck fly off at this speed (m/s) before skidding to a stop.</td></tr><tr><td><code>CanFlingSpeedMax</code></td><td><code>11f</code></td><td>Cans flung out of a wreck fly off at this speed (m/s) before skidding to a stop.</td></tr><tr><td><code>CanFriction</code></td><td><code>2.2f</code></td><td>A skidding can loses this share of its speed per second.</td></tr><tr><td><code>MaxDrops</code></td><td><code>40</code></td><td></td></tr><tr><td><code>ItemPickupReach</code></td><td><code>1.4f</code></td><td></td></tr><tr><td><code>ThrowSpeed</code></td><td><code>7f</code></td><td></td></tr><tr><td><code>ThrowSpeedMax</code></td><td><code>11f</code></td><td>Hardest a pawn can pitch something (a drag released far away).</td></tr><tr><td><code>FlingSpeedMin</code></td><td><code>2.5f</code></td><td></td></tr><tr><td><code>FlingSpeedMax</code></td><td><code>6.5f</code></td><td></td></tr><tr><td><code>DropFriction</code></td><td><code>3.5f</code></td><td>Sliding items lose this share of their speed per second.</td></tr><tr><td><code>ThrowFlightFriction</code></td><td><code>0.8f</code></td><td>A thrown item in flight (still armed) sheds speed slower: a hard throw carries several metres.</td></tr><tr><td><code>ThrowHurtSpeed</code></td><td><code>3f</code></td><td>A thrown item hurts what it hits while moving at least this fast (m/s).</td></tr><tr><td><code>ThrowDamagePerSpeed</code></td><td><code>1.2f</code></td><td>Impact damage per m/s of a thrown item, times its weight class (ThrowWeight).</td></tr><tr><td><code>ThrownGunDamageShare</code></td><td><code>0.5f</code></td><td>Half the gun&#x27;s one-shot damage comes along when a gun is what&#x27;s thrown (it&#x27;s heavy and has corners).</td></tr><tr><td><code>HoverPickRadius</code></td><td><code>0.7f</code></td><td>A hovered item counts as under the cursor within this distance of the aim point.</td></tr><tr><td><code>HoverPickupReach</code></td><td><code>2.0f</code></td><td>Pointing at an item stretches the pickup reach a little (no need to stand right on it).</td></tr><tr><td><code>HardDrops</code></td><td><code>280</code></td><td>Past this many loose items, even a pile on screen gives up its oldest piece. Off-screen ones go at MaxDrops.</td></tr><tr><td><code>MinTopUp</code></td><td><code>1f</code></td><td>Room the tank must have before a can on the ground is worth picking up.</td></tr><tr><td><code>DropRadius</code></td><td><code>0.36f</code></td><td>Footprint of an item lying on the ground (metres): two can&#x27;t lie closer than twice this.</td></tr><tr><td><code>SlotRadius</code></td><td><code>0.45f</code></td><td>Footprint of a module bolted in a slot, for items dropped next to it.</td></tr></table>
+</main>
+<script src="../search.js"></script>
+</body>
+</html>

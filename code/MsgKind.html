@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MsgKind — COLLAPSE MACHINE 2D</title>
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Collapse Machine 2D</a>
+  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+</header>
+<main class="sheet">
+  <h1>MsgKind</h1>
+  <p class="path">src/DustConvoy.Sim/Net/Protocol.cs</p><p class="lead">Wire protocol shared by every transport (LAN sockets, Steam P2P, in-memory loopback). One byte kind, then kind-specific payload. Poses are 30 Hz. The <a href="../entry/quiet.html">quiet</a> world is sent when it changes, and at least once a second. Shots and sounds are their own packet. Enemy deltas are 10 Hz. Join chunks and hellos go reliable.</p><h2>Members</h2><table><tr><th>Name</th><th>Value</th><th></th></tr><tr><td><code>Hello</code></td><td><code>1</code></td><td>client → host: protocol version, player name.</td></tr><tr><td><code>Welcome</code></td><td><code>2</code></td><td>host → client: assigned player index, seed, join stream size.</td></tr><tr><td><code>JoinChunk</code></td><td><code>3</code></td><td>host → client: one chunk of the compressed full-state stream (join in progress).</td></tr><tr><td><code>Input</code></td><td><code>4</code></td><td>client → host: input for a tick.</td></tr><tr><td><code>Snapshot</code></td><td><code>5</code></td><td>host → client: players, trucks, inventories, quests, dialog, drops. On change, and at least once a second.</td></tr><tr><td><code>Enemies</code></td><td><code>6</code></td><td>host → client: 10 Hz quantized enemy delta against the last acked baseline.</td></tr><tr><td><code>EnemiesAck</code></td><td><code>7</code></td><td>client → host: last enemy snapshot sequence received (sets the delta baseline). Reliable.</td></tr><tr><td><code>Refuse</code></td><td><code>8</code></td><td>host → client: refused (full, version mismatch, ...). Payload: reason string.</td></tr><tr><td><code>Chat</code></td><td><code>9</code></td><td>client → host: a chat line typed by that client&#x27;s player (reliable).</td></tr><tr><td><code>Rename</code></td><td><code>10</code></td><td>client → host: the player&#x27;s new nickname (reliable).</td></tr><tr><td><code>RenamePawn</code></td><td><code>11</code></td><td>client → host: rename a crew pawn (index + name).</td></tr><tr><td><code>AddSeat</code></td><td><code>12</code></td><td>client → host: another person on this machine wants a body (split screen).</td></tr><tr><td><code>SeatWelcome</code></td><td><code>13</code></td><td>host → client: player index for that extra local seat.</td></tr><tr><td><code>DropSeat</code></td><td><code>15</code></td><td>client → host: a split-screen seat on this machine was turned off. Their body stays as crew.</td></tr><tr><td><code>SnapPart</code></td><td><code>14</code></td><td>host → client: one piece of a snapshot that did not fit in a single datagram.</td></tr><tr><td><code>Motion</code></td><td><code>16</code></td><td>host → client: 30 Hz poses, aim, hull and the moving drops. The quiet world stays on Snapshot.</td></tr><tr><td><code>Fx</code></td><td><code>17</code></td><td>host → client: shots, sparks, blood and sounds spawned on the host this tick.</td></tr><tr><td><code>CrewOrder</code></td><td><code>18</code></td><td>client → host: this player&#x27;s crew or vehicle card order (reliable).</td></tr><tr><td><code>Redirect</code></td><td><code>19</code></td><td>host → client: this player belongs on another process now. Payload: host string (empty = same machine), port. Reliable.</td></tr><tr><td><code>Mark</code></td><td><code>20</code></td><td>client → host: the colour of this player&#x27;s alt mark, packed 0xRRGGBB. Reliable.</td></tr></table>
+</main>
+<script src="../search.js"></script>
+</body>
+</html>

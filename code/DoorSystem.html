@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoorSystem — COLLAPSE MACHINE 2D</title>
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Collapse Machine 2D</a>
+  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+</header>
+<main class="sheet">
+  <h1>DoorSystem</h1>
+  <p class="path">src/DustConvoy.Sim/Systems/DoorSystem.cs</p><h2>Constants</h2><table><tr><th>Name</th><th>Value</th><th></th></tr><tr><td><code>OpenDepth</code></td><td><code>0.8f</code></td><td>How far in front of / behind the door line (metres) counts as &quot;at the door&quot; to open it.</td></tr><tr><td><code>OpenSideSlack</code></td><td><code>0.5f</code></td><td>Extra reach along the door beyond its half width (a pawn pressed against the wall beside the door still opens it).</td></tr><tr><td><code>HoldRadius</code></td><td><code>2.2f</code></td><td>Anyone this close to the door and walking keeps it open (they&#x27;re probably passing through).</td></tr><tr><td><code>HoldDepth</code></td><td><code>1.0f</code></td><td>Standing still within this distance of the door line also holds it (blocking the doorway).</td></tr><tr><td><code>HoldMoveSpeed</code></td><td><code>0.5f</code></td><td></td></tr><tr><td><code>MaxOpenSpeed</code></td><td><code>5f</code></td><td>Above this speed the doors stay shut. Crew cannot board or step off. A player still can.</td></tr><tr><td><code>OpenRadius</code></td><td><code>1.2f</code></td><td>Legacy radius names kept for callers that only need &quot;roughly at the door&quot;.</td></tr><tr><td><code>AutoCloseRadius</code></td><td><code>2.2f</code></td><td></td></tr></table>
+</main>
+<script src="../search.js"></script>
+</body>
+</html>

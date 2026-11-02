@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TruckPhysicsSystem — COLLAPSE MACHINE 2D</title>
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">Collapse Machine 2D</a>
+  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+</header>
+<main class="sheet">
+  <h1>TruckPhysicsSystem</h1>
+  <p class="path">src/DustConvoy.Sim/Systems/TruckPhysicsSystem.cs</p><h2>Constants</h2><table><tr><th>Name</th><th>Value</th><th></th></tr><tr><td><code>SteerRate</code></td><td><code>2.45f;       // rad/s the steering angle can change /// &lt;summary&gt;Full lock is this share of the truck&#x27;s authored angle. Halfway between the old full lock and the slower one.&lt;/summary&gt; public const float SteerScale = 0.79f</code></td><td></td></tr><tr><td><code>RamDamageSpeed</code></td><td><code>3f;     // relative speed above which ramming hurts public const float RamDamageScale = 2.5f</code></td><td></td></tr><tr><td><code>WallDamageScale</code></td><td><code>1.5f</code></td><td></td></tr><tr><td><code>TrackMinDistance</code></td><td><code>0.8f</code></td><td></td></tr><tr><td><code>BoostSpeed</code></td><td><code>1.35f</code></td><td>Shift while driving: top speed and pull multipliers, paid for with this much fuel per meter.</td></tr><tr><td><code>BoostAccel</code></td><td><code>1.8f</code></td><td></td></tr><tr><td><code>BoostFuelBurn</code></td><td><code>3f</code></td><td></td></tr><tr><td><code>RedlineBurn</code></td><td><code>2f</code></td><td>Speed above the unboosted top (the red zone on the gauge) burns this many times the fuel that pace would.</td></tr><tr><td><code>ParkingBrake</code></td><td><code>0.6f</code></td><td>Share of full braking applied while nobody sits at the wheel.</td></tr><tr><td><code>SlipShare</code></td><td><code>0.35f</code></td><td>Share of a turn&#x27;s sideways pull the tyres let through as slide (at SlipFullSpeed and up).</td></tr><tr><td><code>SlipFullSpeed</code></td><td><code>9f</code></td><td></td></tr><tr><td><code>Grip</code></td><td><code>3.5f</code></td><td>How fast grip kills slide (1/s): the hull straightens out in well under a second.</td></tr><tr><td><code>SlideCapShare</code></td><td><code>0.3f</code></td><td>Slide never exceeds this share of forward speed.</td></tr><tr><td><code>PropSmashSpeed</code></td><td><code>5f</code></td><td>Below this speed a truck just bumps props; above it the excess speed turns into prop damage.</td></tr><tr><td><code>PropRamDamageScale</code></td><td><code>28f</code></td><td></td></tr><tr><td><code>SmashSpeedKeep</code></td><td><code>0.65f</code></td><td>Fraction of speed a light hull keeps after ploughing through a prop. Heavier trucks keep more.</td></tr><tr><td><code>BushCrushSpeed</code></td><td><code>2f</code></td><td></td></tr></table>
+</main>
+<script src="../search.js"></script>
+</body>
+</html>
