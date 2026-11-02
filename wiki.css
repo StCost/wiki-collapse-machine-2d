@@ -51,8 +51,9 @@ html[data-lang="ru"] .en { display: none; }
 body { display: grid; grid-template-columns: 248px minmax(0, 980px); grid-template-rows: auto 1fr; justify-content: center; }
 :root { --head-hazard: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.16) 0 14px, transparent 14px 42px); }
 .top { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 10px 16px; background-color: var(--brand); background-image: var(--head-hazard); color: #140e08; }
-.brand { display: block; line-height: 0; text-decoration: none; background: #000; }
+.brand { display: block; line-height: normal; text-decoration: none; background: #000; color: var(--sand); }
 .brand img { width: 100%; height: auto; display: block; }
+.brand .sitename { display: block; padding: 8px 10px 12px; text-align: center; color: var(--sand); font: 700 13px/1.2 var(--mono); letter-spacing: 1.6px; text-transform: uppercase; }
 button.tool { font: 700 12px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--bone); background: #120e0b; border: 1px solid #140e08; padding: 6px 10px; cursor: pointer; }
 button.tool.on { color: #140e08; background-color: var(--brand); background-image: var(--head-hazard); }
 .top form { position: relative; }
@@ -62,7 +63,7 @@ button.tool.on { color: #140e08; background-color: var(--brand); background-imag
 .hits a { display: block; padding: 6px 10px; color: var(--bone); text-decoration: none; letter-spacing: 0; text-transform: none; font: 15px var(--ui); }
 .hits a:hover, .hits a.on { background: rgba(255,128,0,0.18); color: var(--sand); }
 .rail { padding: 0 0 28px; border-right: 1px solid var(--line); background: rgba(8,7,6,0.55); }
-.rail .brand { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.rail .brand { border-bottom: 1px solid var(--line); padding: 16px 22px 8px; }
 .rail p { margin: 14px 14px 6px; color: var(--sand); font: 700 11px var(--mono); letter-spacing: 1.4px; text-transform: uppercase; }
 .rail a { display: block; padding: 5px 14px; color: var(--bone); text-decoration: none; font-size: 15px; }
 .rail a:hover, .rail a.on { background: rgba(255,128,0,0.14); color: var(--sand); }
@@ -134,5 +135,6 @@ details.tech summary { cursor: pointer; color: var(--sand); font: 700 14px var(-
   .rail nav { display: flex; flex-wrap: wrap; }
   .sheet { margin: 0; max-width: none; }
   .infobox { float: none; width: auto; margin: 0 0 16px; }
-  .rail .brand img { width: min(100%, 220px); }
+  .rail .brand { padding-left: 28px; padding-right: 28px; }
+  .rail .brand img { width: 100%; max-width: 280px; margin: 0 auto; }
 }

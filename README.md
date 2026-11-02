@@ -1,4 +1,4 @@
-# COLLAPSE MACHINE 2D field manual
+# COLLAPSE MACHINE 2D Wiki
 
 Generated from the game. Do not edit these pages by hand.
 
