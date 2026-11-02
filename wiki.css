@@ -77,6 +77,10 @@ ol.lessons li { margin: 8px 0; font-size: 16px; }
 .foot { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 18px; padding: 14px 18px; border-top: 1px solid var(--line); color: var(--sand); font-size: 14px; }
 .foot p { margin: 0; }
 .foot label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.foot input { -webkit-appearance: none; appearance: none; position: relative; flex: none; width: 18px; height: 18px; margin: 0; padding: 0; background: #120e0b; border: 2px solid var(--brand); cursor: pointer; }
+.foot input:hover { box-shadow: 0 0 0 3px rgba(255,128,0,0.18); }
+.foot input:checked { background: var(--brand); border-color: var(--brand); }
+.foot input:checked::after { content: ""; position: absolute; left: 4px; top: 0; width: 5px; height: 10px; border: solid #140e08; border-width: 0 2px 2px 0; transform: rotate(45deg); }
 .crumb { margin: 0; padding: 8px 18px; font: 13px var(--mono); border-bottom: 1px solid var(--line); }
 .crumb a { color: var(--sand); }
 h1 { position: relative; margin: 0; padding: 12px 18px 12px 36px; background-color: var(--brand); background-image: var(--head-hazard); color: #140e08; font: 700 22px/1.3 "Segoe UI", Bahnschrift, "DejaVu Sans", sans-serif; letter-spacing: 0; }
