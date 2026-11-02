@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wanderers — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="article"><div class="prose"><blockquote><p><span class="en">Take 12 fuel off your hands for a cargo crate.</span><span class="ru">Забрать у вас 12 топлива за грузовой ящик.</span></p><p class="note">Has module → Give module</p></blockquote><blockquote><p><span class="en">Join us. One of you rides along.</span><span class="ru">К нам. Один из вас поедет с нами.</span></p><p class="note">Not crew → Recruit</p></blockquote><blockquote><p><span class="en">Work: clear the raider nest nearby, we pay 40 fuel.</span><span class="ru">Работа: зачистите гнездо рейдеров рядом, платим 40 топлива.</span></p><p class="note">Quest: q survive 90, Dismiss</p></blockquote><blockquote><p><span class="en">Can you spare 5 fuel? We're dry.</span><span class="ru">Пять топлива не найдётся? Мы на нуле.</span></p><p class="note">Fuel: +5</p></blockquote><blockquote><p><span class="en">What's the road been like?</span><span class="ru">Как там дорога?</span></p><p class="reply"><span class="en">Dry. The <span class="hot">sun</span> took the water, and the <span class="cold">nights</span> took the rest.</span><span class="ru">Сухо. <span class="hot">Солнце</span> забрало воду, <span class="cold">ночи</span> забрали остальное.</span></p><p class="note">Chatter</p></blockquote><blockquote><p><span class="en">You seen anyone else out here?</span><span class="ru">Кого-нибудь ещё видели?</span></p><p class="reply"><span class="en">A truck, yesterday. They didn't stop. Can't blame them.</span><span class="ru">Машину, вчера. Не остановились. Их не виню.</span></p><p class="note">Chatter</p></blockquote><blockquote><p><span class="en">Keep walking. We can't feed another <em>mouth</em>.</span><span class="ru">Идите дальше. Ещё один <em>mouth</em> нам не прокормить.</span></p><p class="note">Dismiss</p></blockquote><blockquote><p><span class="en">And you.</span><span class="ru">И вы.</span></p><p class="note">Dismiss</p></blockquote><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/dialogs/dlg_wanderers.json</span></summary><table><tr><th>Availability</th><td>Sos</td></tr></table></details></div></div>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

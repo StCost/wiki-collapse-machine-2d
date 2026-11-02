@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beam Projector — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="article"><aside class="infobox"><img class="hero" alt="" src="../media/weapons/truck_beam.png"><dl class="stats"><div><dt><span class="en">Kind</span><span class="ru">Вид</span></dt><dd>Beam</dd></div><div><dt><span class="en">Damage</span><span class="ru">Урон</span></dt><dd>3.5</dd></div><div><dt><span class="en">Range</span><span class="ru">Дальность</span></dt><dd>40 m</dd></div><div><dt><span class="en">Interval</span><span class="ru">Интервал</span></dt><dd>0.06 s</dd></div></dl></aside><div class="prose"><p class="lead"><span class="en">Beam Projector deals 3.5 damage, out to 40 m, every 0.06 s.</span><span class="ru">Проектор луча: 3.5 урона, до 40 м, каждые 0.06 с.</span></p><h2><span class="en">Used by</span><span class="ru">Где встречается</span></h2><h3><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></h3><p class="links"><a href="../entry/mod_auto_turret_beam.html"><span class="en">Auto Beam Turret</span><span class="ru">Автолуч</span></a> <a href="../entry/mod_turret_beam.html"><span class="en">Beam Turret</span><span class="ru">Лучевая турель</span></a></p><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/weapons/truck_beam.json</span></summary><table><tr><th>Auto</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr><tr><th>Tracer</th><td>Beam</td></tr><tr><th>Tracer Seconds</th><td>0.08</td></tr><tr><th>Sound</th><td>Beam hum</td></tr><tr><th>Pierce</th><td>2</td></tr><tr><th>Picture Meters</th><td>2</td></tr><tr><th>Picture Across</th><td>2</td></tr></table></details></div></div>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

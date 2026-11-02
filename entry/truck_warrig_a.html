@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>War Rig — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="article"><aside class="infobox"><img class="hero" alt="" src="../media/trucks/truck_warrig_a_exterior.png"><span class="note"><span class="en">Outside</span><span class="ru">Снаружи</span></span><div class="gallery"><figure><img class="" alt="" src="../media/trucks/truck_warrig_a_interior.png" loading="lazy"><figcaption><span class="en">Inside</span><span class="ru">Внутри</span></figcaption></figure></div><dl class="stats"><div><dt><span class="en">Length</span><span class="ru">Длина</span></dt><dd>21 m</dd></div><div><dt><span class="en">Width</span><span class="ru">Ширина</span></dt><dd>6.6 m</dd></div></dl></aside><div class="prose"><p class="lead"><span class="en">War Rig is 21 m long and 6.6 m wide.</span><span class="ru">Боевая установка: 21 × 6.6 м.</span></p><h2><span class="en">Related</span><span class="ru">Связанное</span></h2><h3><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></h3><p class="links"><a href="../entry/mod_turret_autocannon.html"><span class="en">Autocannon Turret</span><span class="ru">Турель-автопушка</span></a> <a href="../entry/mod_fuel_tank_large.html"><span class="en">Long-Range Tank</span><span class="ru">Дальнобойный бак</span></a> <a href="../entry/mod_cargo.html"><span class="en">Cargo Crate</span><span class="ru">Грузовой ящик</span></a> <a href="../entry/mod_turret_cannon.html"><span class="en">Scrap Cannon Turret</span><span class="ru">Турель из лома</span></a></p><h3><span class="en">Wheels</span><span class="ru">Колёса</span></h3><p class="links"><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></p><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/trucks/truck_warrig_a.json</span></summary><table><tr><th>Hull Thickness</th><td>0.9</td></tr><tr><th>Interior Front Inset</th><td>1.95</td></tr><tr><th>Doors</th><td><table><tr><th>Side</th><td>Left</td></tr><tr><th>Offset</th><td>1.65</td></tr><tr><th>Depth</th><td>0</td></tr><tr><th>Width</th><td>1.8</td></tr></table><table><tr><th>Side</th><td>Right</td></tr><tr><th>Offset</th><td>1.65</td></tr><tr><th>Depth</th><td>0</td></tr><tr><th>Width</th><td>1.8</td></tr></table></td></tr><tr><th>Seat Positions</th><td><table><tr><th>X</th><td>6.3</td></tr><tr><th>Y</th><td>-0.2</td></tr></table></td></tr><tr><th>Wheels</th><td><table><tr><th>X</th><td>7.95</td></tr><tr><th>Y</th><td>-2.05</td></tr><tr><th>Steer</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table><table><tr><th>X</th><td>7.95</td></tr><tr><th>Y</th><td>2.2</td></tr><tr><th>Steer</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table><table><tr><th>X</th><td>-2.1</td></tr><tr><th>Y</th><td>-2.75</td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table><table><tr><th>X</th><td>-2.1</td></tr><tr><th>Y</th><td>2.8</td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table><table><tr><th>X</th><td>-7.9</td></tr><tr><th>Y</th><td>-2.35</td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table><table><tr><th>X</th><td>-7.95</td></tr><tr><th>Y</th><td>2.45</td></tr><tr><th>Tire</th><td><a href="../entry/wheel_heavy.html"><span class="en">Heavy tread</span><span class="ru">Тяжёлая гусеница</span></a></td></tr></table></td></tr><tr><th>Slots</th><td><table><tr><th>X</th><td>-2.5</td></tr><tr><th>Y</th><td>0.1</td></tr><tr><th>Module</th><td><a href="../entry/mod_turret_autocannon.html"><span class="en">Autocannon Turret</span><span class="ru">Турель-автопушка</span></a></td></tr><tr><th>Arc Deg</th><td>0</td></tr></table><table><tr><th>X</th><td>-4.2</td></tr><tr><th>Y</th><td>1.575</td></tr><tr><th>Module</th><td><a href="../entry/mod_fuel_tank_large.html"><span class="en">Long-Range Tank</span><span class="ru">Дальнобойный бак</span></a></td></tr><tr><th>Arc Deg</th><td>0</td></tr></table><table><tr><th>X</th><td>-4.2</td></tr><tr><th>Y</th><td>-1.575</td></tr><tr><th>Module</th><td><a href="../entry/mod_cargo.html"><span class="en">Cargo Crate</span><span class="ru">Грузовой ящик</span></a></td></tr><tr><th>Arc Deg</th><td>0</td></tr></table><table><tr><th>X</th><td>2.25</td></tr><tr><th>Y</th><td>0.15</td></tr><tr><th>Module</th><td><a href="../entry/mod_turret_cannon.html"><span class="en">Scrap Cannon Turret</span><span class="ru">Турель из лома</span></a></td></tr><tr><th>Cab</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr><tr><th>Arc Deg</th><td>0</td></tr></table></td></tr><tr><th>Parts</th><td><table><tr><th>Hull</th><td>480</td></tr><tr><th>Engine</th><td>90</td></tr><tr><th>Cabin</th><td>80</td></tr><tr><th>Wheels</th><td>80</td></tr></table></td></tr><tr><th>Armor</th><td>5</td></tr><tr><th>Armor Level</th><td>1</td></tr><tr><th>Max Speed</th><td>12</td></tr><tr><th>Accel</th><td>4.5</td></tr><tr><th>Brake Decel</th><td>8</td></tr><tr><th>Drag</th><td>1.1</td></tr><tr><th>Max Steer Deg</th><td>26</td></tr><tr><th>Base Fuel Cap</th><td>70</td></tr><tr><th>Fuel Burn Per Meter</th><td>0.02</td></tr><tr><th>Mass</th><td>14000</td></tr></table></details></div></div>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

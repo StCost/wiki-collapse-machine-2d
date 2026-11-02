@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Discover — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="steps"><p><span class="en">Find a weapon or some gear, and take it with you.</span><span class="ru">Найдите оружие или снаряжение и возьмите с собой.</span></p><p><span class="en">Hold <kbd>Alt</kbd> to highlight items around you.</span><span class="ru">Удерживайте <kbd>Alt</kbd>, чтобы подсветить вещи вокруг.</span></p><p><span class="en">Scroll the <kbd>Wheel</kbd> to zoom in and out.</span><span class="ru">Крутите <kbd>Wheel</kbd>, чтобы приблизить и отдалить.</span></p><p><span class="en">Step close and press <kbd>E</kbd> to pick up the nearest item you are looking at.</span><span class="ru">Подойдите и нажмите <kbd>E</kbd>, чтобы поднять ближайшую вещь, на которую смотрите.</span></p></div>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

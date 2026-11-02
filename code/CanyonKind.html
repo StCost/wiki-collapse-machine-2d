@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CanyonKind — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <p class="path">src/DustConvoy.Sim/World/Biomes.cs</p><p class="lead">The ground pattern a biome stamps over its patch. The winning biome owns the pattern; numbers only ease the border.</p><h2><span class="en">Members</span><span class="ru">Значения</span></h2><table><tr><th><span class="en">Name</span><span class="ru">Имя</span></th><th><span class="en">Value</span><span class="ru">Значение</span></th><th><span class="en">Note</span><span class="ru">Заметка</span></th></tr><tr><td><code>Roads</code></td><td><code>0</code></td><td>The original Voronoi web.</td></tr><tr><td><code>Slot</code></td><td><code>1</code></td><td>The same web, cut thin.</td></tr><tr><td><code>Pan</code></td><td><code>2</code></td><td>Open floor. Islands is how many sites stay as rock mesas.</td></tr><tr><td><code>Lanes</code></td><td><code>3</code></td><td>Parallel ribbons. Wobble at least 0.5 runs them north-south. Lane is the spacing.</td></tr><tr><td><code>Bowls</code></td><td><code>4</code></td><td>Scattered round floors. Width is the radius, Islands is how many sites open.</td></tr><tr><td><code>Faults</code></td><td><code>5</code></td><td>A few long valleys. Wobble at least 0.5 runs them east-west. Lane is the spacing.</td></tr><tr><td><code>Web</code></td><td><code>6</code></td><td>The Voronoi web with roads filled back in. Seal is how many.</td></tr><tr><td><code>Weave</code></td><td><code>7</code></td><td>The Voronoi web shoved by a slow warp. Lane is how far, in site cells.</td></tr></table>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

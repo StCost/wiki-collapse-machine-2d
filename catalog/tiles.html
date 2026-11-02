@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tiles — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="sorts"><button type="button" class="tool sort on" data-key="name"><span class="en">Name</span><span class="ru">Имя</span></button></div><ul class="index"><li data-name="floor grate" data-stat="0"><a class="cat" href="../entry/floor_grate.html"><img alt="" src="../media/tiles/floor_grate.png" loading="lazy"><b><span class="en">Floor grate</span><span class="ru">Floor grate</span></b></a></li><li data-name="floor plate" data-stat="0"><a class="cat" href="../entry/floor_plate.html"><img alt="" src="../media/tiles/floor_plate.png" loading="lazy"><b><span class="en">Floor plate</span><span class="ru">Floor plate</span></b></a></li><li data-name="wall" data-stat="0"><a class="cat" href="../entry/wall.html"><img alt="" src="../media/tiles/wall.png" loading="lazy"><b><span class="en">Wall</span><span class="ru">Wall</span></b></a></li><li data-name="wall fork t" data-stat="0"><a class="cat" href="../entry/wall_fork.html"><img alt="" src="../media/tiles/wall_fork.png" loading="lazy"><b><span class="en">Wall fork T</span><span class="ru">Wall fork T</span></b></a></li><li data-name="wall fork x" data-stat="0"><a class="cat" href="../entry/wall_cross.html"><img alt="" src="../media/tiles/wall_cross.png" loading="lazy"><b><span class="en">Wall fork X</span><span class="ru">Wall fork X</span></b></a></li><li data-name="wall turn left" data-stat="0"><a class="cat" href="../entry/wall_turn.html"><img alt="" src="../media/tiles/wall_turn.png" loading="lazy"><b><span class="en">Wall turn left</span><span class="ru">Wall turn left</span></b></a></li><li data-name="wall turn right" data-stat="0"><a class="cat" href="../entry/wall_turn_flip.html"><img alt="" src="../media/tiles/wall_turn_flip.png" loading="lazy"><b><span class="en">Wall turn right</span><span class="ru">Wall turn right</span></b></a></li><li data-name="warning hash" data-stat="0"><a class="cat" href="../entry/warn_hash.html"><img alt="" src="../media/tiles/warn_hash.png" loading="lazy"><b><span class="en">Warning hash</span><span class="ru">Warning hash</span></b></a></li><li data-name="warning stripes" data-stat="0"><a class="cat" href="../entry/warn_stripes.html"><img alt="" src="../media/tiles/warn_stripes.png" loading="lazy"><b><span class="en">Warning stripes</span><span class="ru">Warning stripes</span></b></a></li></ul>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

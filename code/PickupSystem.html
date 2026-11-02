@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PickupSystem — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <p class="path">src/DustConvoy.Sim/Systems/PickupSystem.cs</p><h2><span class="en">Constants</span><span class="ru">Константы</span></h2><table><tr><th><span class="en">Name</span><span class="ru">Имя</span></th><th><span class="en">Value</span><span class="ru">Значение</span></th><th><span class="en">Note</span><span class="ru">Заметка</span></th></tr><tr><td><code>MaxCans</code></td><td>16</td><td></td></tr><tr><td><code>PawnPickupRadius</code></td><td>0.8f</td><td></td></tr><tr><td><code>SpillChance</code></td><td>0.75f</td><td></td></tr><tr><td><code>CanAmount</code></td><td>8f</td><td></td></tr><tr><td><code>CanFlingSpeedMin</code></td><td>6f</td><td>Cans flung out of a wreck fly off at this speed (m/s) before skidding to a stop.</td></tr><tr><td><code>CanFlingSpeedMax</code></td><td>11f</td><td>Cans flung out of a wreck fly off at this speed (m/s) before skidding to a stop.</td></tr><tr><td><code>CanFriction</code></td><td>2.2f</td><td>A skidding can loses this share of its speed per second.</td></tr><tr><td><code>MaxDrops</code></td><td>40</td><td></td></tr><tr><td><code>ItemPickupReach</code></td><td>1.4f</td><td></td></tr><tr><td><code>ThrowSpeed</code></td><td>7f</td><td></td></tr><tr><td><code>ThrowSpeedMax</code></td><td>11f</td><td>Hardest a pawn can pitch something (a drag released far away).</td></tr><tr><td><code>FlingSpeedMin</code></td><td>2.5f</td><td></td></tr><tr><td><code>FlingSpeedMax</code></td><td>6.5f</td><td></td></tr><tr><td><code>DropFriction</code></td><td>3.5f</td><td>Sliding items lose this share of their speed per second.</td></tr><tr><td><code>ThrowFlightFriction</code></td><td>0.8f</td><td>A thrown item in flight (still armed) sheds speed slower: a hard throw carries several metres.</td></tr><tr><td><code>ThrowHurtSpeed</code></td><td>3f</td><td>A thrown item hurts what it hits while moving at least this fast (m/s).</td></tr><tr><td><code>ThrowDamagePerSpeed</code></td><td>1.2f</td><td>Impact damage per m/s of a thrown item, times its weight class (ThrowWeight).</td></tr><tr><td><code>ThrownGunDamageShare</code></td><td>0.5f</td><td>Half the gun&#x27;s one-shot damage comes along when a gun is what&#x27;s thrown (it&#x27;s heavy and has corners).</td></tr><tr><td><code>HoverPickRadius</code></td><td>0.7f</td><td>A hovered item counts as under the cursor within this distance of the aim point.</td></tr><tr><td><code>HoverPickupReach</code></td><td>2.0f</td><td>Pointing at an item stretches the pickup reach a little (no need to stand right on it).</td></tr><tr><td><code>HardDrops</code></td><td>280</td><td>Past this many loose items, even a pile on screen gives up its oldest piece. Off-screen ones go at MaxDrops.</td></tr><tr><td><code>MinTopUp</code></td><td>1f</td><td>Room the tank must have before a can on the ground is worth picking up.</td></tr><tr><td><code>DropRadius</code></td><td>0.36f</td><td>Footprint of an item lying on the ground (metres): two can&#x27;t lie closer than twice this.</td></tr><tr><td><code>SlotRadius</code></td><td>0.45f</td><td>Footprint of a module bolted in a slot, for items dropped next to it.</td></tr></table>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

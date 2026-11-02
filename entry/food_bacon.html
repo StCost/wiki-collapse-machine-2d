@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bacon — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <div class="article"><aside class="infobox"><img class="hero" alt="" src="../media/modules/food_bacon.png"><dl class="stats"><div><dt><span class="en">Kind</span><span class="ru">Вид</span></dt><dd>Food</dd></div><div><dt><span class="en">HP</span><span class="ru">ОЗ</span></dt><dd>8</dd></div></dl></aside><div class="prose"><p class="lead"><span class="en">Bacon is a Food.</span><span class="ru">Бекон: Food.</span></p><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/modules/food_bacon.json</span></summary><table><tr><th>Fuel Value</th><td>4</td></tr><tr><th>Power</th><td>22</td></tr><tr><th>Consumable</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr></table></details></div></div>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>

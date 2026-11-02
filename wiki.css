@@ -62,7 +62,7 @@ button.tool.on { color: #140e08; background-color: var(--brand); background-imag
 .hits a { display: block; padding: 6px 10px; color: var(--bone); text-decoration: none; letter-spacing: 0; text-transform: none; font: 15px var(--ui); }
 .hits a:hover, .hits a.on { background: rgba(255,128,0,0.18); color: var(--sand); }
 .rail { padding: 0 0 28px; border-right: 1px solid var(--line); background: rgba(8,7,6,0.55); }
-.rail .brand { border-bottom: 1px solid var(--line); }
+.rail .brand { border-bottom: 1px solid var(--line); padding: 18px 0; }
 .rail p { margin: 14px 14px 6px; color: var(--sand); font: 700 11px var(--mono); letter-spacing: 1.4px; text-transform: uppercase; }
 .rail a { display: block; padding: 5px 14px; color: var(--bone); text-decoration: none; font-size: 15px; }
 .rail a:hover, .rail a.on { background: rgba(255,128,0,0.14); color: var(--sand); }

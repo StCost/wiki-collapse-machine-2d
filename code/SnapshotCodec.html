@@ -4,8 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SnapshotCodec — COLLAPSE MACHINE 2D</title>
-<link rel="stylesheet" href="../wiki.css">
+<link rel="stylesheet" href="../wiki.css?v=20261102165943">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261102165943";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
 </head>
 <body>
 <header class="top">
@@ -28,6 +47,6 @@
   <p class="path">src/DustConvoy.Sim/Net/SnapshotCodec.cs</p><h2><span class="en">Constants</span><span class="ru">Константы</span></h2><table><tr><th><span class="en">Name</span><span class="ru">Имя</span></th><th><span class="en">Value</span><span class="ru">Значение</span></th><th><span class="en">Note</span><span class="ru">Заметка</span></th></tr><tr><td><code>PosStep</code></td><td>1f / 32f; // 32 px = 1 m: one pixel of position precision /// &lt;summary&gt;Trucks farther than this from the peer are left out of the pose packet. Convoy trucks and driven trucks always go.&lt;/summary&gt; public const float MotionRadius = 96f</td><td></td></tr><tr><td><code>LocationSendDistance</code></td><td>260f</td><td>Locations this far from every player are sent as empty placeholders (indices must line up with the host&#x27;s list).</td></tr><tr><td><code>ChatResendSeconds</code></td><td>1.0</td><td>Chat lines ride along for this long after they are said (~30 snapshots), so a dropped packet loses nothing.</td></tr><tr><td><code>ChatBytesPerSnapshot</code></td><td>320</td><td>Text budget per snapshot: the full snapshot must stay inside one packet. Recent lines rotate through it.</td></tr><tr><td><code>PropsPerSnapshot</code></td><td>12</td><td>Prop entries per full snapshot; the full snapshot must stay inside one packet.</td></tr><tr><td><code>FxSounds</code></td><td>8</td><td></td></tr><tr><td><code>FxTracers</code></td><td>12</td><td></td></tr><tr><td><code>FxHits</code></td><td>8</td><td></td></tr><tr><td><code>FxGore</code></td><td>4</td><td></td></tr><tr><td><code>OwnedPoseTag</code></td><td>0xA5</td><td></td></tr></table>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js"></script>
+<script src="../search.js?v=20261102165943"></script>
 </body>
 </html>
