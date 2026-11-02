@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-depth="1">
+<html lang="en" data-lang="en" data-depth="1">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,15 +9,25 @@
 <body>
 <header class="top">
   <a class="brand" href="../index.html">Collapse Machine 2D</a>
-  <nav><a href="../index.html">Field manual</a><a href="../catalog/pawns.html">Pawns</a><a href="../catalog/weapons.html">Weapons</a><a href="../catalog/modules.html">Modules</a><a href="../catalog/trucks.html">Trucks</a><a href="../catalog/traits.html">Traits</a><a href="../code/index.html">Mechanics</a></nav>
+  <div class="tools">
+    <button type="button" class="tool" id="back"><span class="en">Back</span><span class="ru">Назад</span></button>
+    <button type="button" class="tool" id="random"><span class="en">Random page</span><span class="ru">Случайная</span></button>
+    <button type="button" class="tool lang on" data-set="en">EN</button>
+    <button type="button" class="tool lang" data-set="ru">RU</button>
+  </div>
   <form role="search" autocomplete="off">
     <input id="q" type="search" placeholder="Search" aria-label="Search">
     <ul class="hits"></ul>
   </form>
 </header>
+<aside class="rail">
+  <p><span class="en">Contents</span><span class="ru">Содержание</span></p>
+  <nav><a class="" href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a><a class="" href="../catalog/pawns.html"><span class="en">Pawns</span><span class="ru">Персонажи</span></a><a class="" href="../catalog/weapons.html"><span class="en">Weapons</span><span class="ru">Оружие</span></a><a class="" href="../catalog/modules.html"><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></a><a class="on" href="../catalog/trucks.html"><span class="en">Trucks</span><span class="ru">Грузовики</span></a><a class="" href="../catalog/traits.html"><span class="en">Traits</span><span class="ru">Черты</span></a><a class="" href="../catalog/locations.html"><span class="en">Locations</span><span class="ru">Места</span></a><a class="" href="../catalog/dialogs.html"><span class="en">Dialogs</span><span class="ru">Диалоги</span></a><a class="" href="../catalog/quests.html"><span class="en">Quests</span><span class="ru">Задания</span></a><a class="" href="../catalog/tiles.html"><span class="en">Tiles</span><span class="ru">Плитки</span></a><a class="" href="../catalog/doors.html"><span class="en">Doors</span><span class="ru">Двери</span></a><a class="" href="../catalog/wheels.html"><span class="en">Wheels</span><span class="ru">Колёса</span></a><a class="" href="../catalog/slots.html"><span class="en">Slots</span><span class="ru">Слоты</span></a><a class="" href="../catalog/config.html"><span class="en">World config</span><span class="ru">Настройки мира</span></a><a class="" href="../catalog/sprites.html"><span class="en">sprites</span><span class="ru">sprites</span></a><a class="" href="../code/index.html"><span class="en">Mechanics</span><span class="ru">Механика</span></a></nav>
+</aside>
 <main class="sheet">
-  <h1>Trucks</h1>
-  <p class="path">content/trucks</p><ul class="plain"><li><a href="../entry/truck_sedan_bay.html">Bay Sedan</a> <span class="ru">Седан-залив</span></li><li><a href="../entry/truck_trader_b.html">Caravan Wagon</a> <span class="ru">Фургон каравана</span></li><li><a href="../entry/truck_buggy_a.html">Dune Buggy</a> <span class="ru">Дюнный багги</span></li><li><a href="../entry/truck_hauler_a.html">Hauler</a> <span class="ru">Тягач</span></li><li><a href="../entry/truck_raider_a.html">Raider Buggy</a> <span class="ru">Багги рейдеров</span></li><li><a href="../entry/truck_raider_b.html">Raider Technical</a> <span class="ru">Техничка рейдеров</span></li><li><a href="../entry/truck_buggy_rocket.html">Rocket Buggy</a> <span class="ru">Ракетный багги</span></li><li><a href="../entry/truck_runabout.html">Runabout</a> <span class="ru">Прогулочная</span></li><li><a href="../entry/truck_scout_a.html">Scout</a> <span class="ru">Разведчик</span></li><li><a href="../entry/truck_sedan.html">Sedan</a> <span class="ru">Седан</span></li><li><a href="../entry/truck_rocket.html">Space Rocket</a> <span class="ru">Космическая ракета</span></li><li><a href="../entry/truck_trader_a.html">Trader Tanker</a> <span class="ru">Цистерна торговца</span></li><li><a href="../entry/truck_warrig_a.html">War Rig</a> <span class="ru">Боевая установка</span></li></ul>
+  <p class="crumb"><a href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a> / <a href="../catalog/trucks.html"><span class="en">Trucks</span><span class="ru">Грузовики</span></a></p>
+  <h1><span class="en">Trucks</span><span class="ru">Грузовики</span></h1>
+  <p class="path">content/trucks</p><nav class="letters"><a href="#LB">B</a><a href="#LC">C</a><a href="#LD">D</a><a href="#LH">H</a><a href="#LR">R</a><a href="#LS">S</a><a href="#LT">T</a><a href="#LW">W</a></nav><h2 id="LB">B</h2><ul class="plain"><li><a href="../entry/truck_sedan_bay.html"><span class="en">Bay Sedan</span><span class="ru">Седан-залив</span></a></li></ul><h2 id="LC">C</h2><ul class="plain"><li><a href="../entry/truck_trader_b.html"><span class="en">Caravan Wagon</span><span class="ru">Фургон каравана</span></a></li></ul><h2 id="LD">D</h2><ul class="plain"><li><a href="../entry/truck_buggy_a.html"><span class="en">Dune Buggy</span><span class="ru">Дюнный багги</span></a></li></ul><h2 id="LH">H</h2><ul class="plain"><li><a href="../entry/truck_hauler_a.html"><span class="en">Hauler</span><span class="ru">Тягач</span></a></li></ul><h2 id="LR">R</h2><ul class="plain"><li><a href="../entry/truck_raider_a.html"><span class="en">Raider Buggy</span><span class="ru">Багги рейдеров</span></a></li><li><a href="../entry/truck_raider_b.html"><span class="en">Raider Technical</span><span class="ru">Техничка рейдеров</span></a></li><li><a href="../entry/truck_buggy_rocket.html"><span class="en">Rocket Buggy</span><span class="ru">Ракетный багги</span></a></li><li><a href="../entry/truck_runabout.html"><span class="en">Runabout</span><span class="ru">Прогулочная</span></a></li></ul><h2 id="LS">S</h2><ul class="plain"><li><a href="../entry/truck_scout_a.html"><span class="en">Scout</span><span class="ru">Разведчик</span></a></li><li><a href="../entry/truck_sedan.html"><span class="en">Sedan</span><span class="ru">Седан</span></a></li><li><a href="../entry/truck_rocket.html"><span class="en">Space Rocket</span><span class="ru">Космическая ракета</span></a></li></ul><h2 id="LT">T</h2><ul class="plain"><li><a href="../entry/truck_trader_a.html"><span class="en">Trader Tanker</span><span class="ru">Цистерна торговца</span></a></li></ul><h2 id="LW">W</h2><ul class="plain"><li><a href="../entry/truck_warrig_a.html"><span class="en">War Rig</span><span class="ru">Боевая установка</span></a></li></ul>
 </main>
 <script src="../search.js"></script>
 </body>
