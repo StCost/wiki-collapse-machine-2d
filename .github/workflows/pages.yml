@@ -18,9 +18,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Publish under /collapse-machine
+        run: |
+          set -euo pipefail
+          mkdir -p site/collapse-machine
+          shopt -s dotglob
+          for item in *; do
+            case "$item" in
+              .git|.github|site) continue ;;
+            esac
+            cp -a "$item" site/collapse-machine/
+          done
+          printf '%s\n' 'wiki.dreamingsaints.com' > site/CNAME
+          printf '%s\n' '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/collapse-machine/"><link rel="canonical" href="https://wiki.dreamingsaints.com/collapse-machine/"><title>COLLAPSE MACHINE 2D wiki</title></head><body><p><a href="/collapse-machine/">COLLAPSE MACHINE 2D wiki</a></p></body></html>' > site/index.html
+          touch site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4
