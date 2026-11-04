@@ -8,11 +8,11 @@
 <meta property="og:title" content="COLLAPSE MACHINE 2D Wiki - OrderKind">
 <meta property="og:image" content="../logo.png">
 <link rel="icon" href="../logo.png">
-<link rel="stylesheet" href="../wiki.css?v=20261104030641">
+<link rel="stylesheet" href="../wiki.css?v=20261104032444">
 <script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
 <script>
 (function () {
-  var build = "20261104030641";
+  var build = "20261104032444";
   var depth = +document.documentElement.getAttribute("data-depth") || 0;
   var pre = "";
   for (var i = 0; i < depth; i++) pre += "../";
@@ -51,6 +51,6 @@
   <p class="path">src/DustConvoy.Sim/World/Entities.cs</p><h2><span class="en">Members</span><span class="ru">Значения</span></h2><table><tr><th><span class="en">Name</span><span class="ru">Имя</span></th><th><span class="en">Value</span><span class="ru">Значение</span></th><th><span class="en">Note</span><span class="ru">Заметка</span></th></tr><tr><td><code>None</code></td><td><code>0</code></td><td></td></tr><tr><td><code>Stand</code></td><td><code>1</code></td><td>Walk to a truck-local point and stay there.</td></tr><tr><td><code>Drive</code></td><td><code>2</code></td><td>Take the driver seat of a convoy truck and follow the lead truck.</td></tr><tr><td><code>Turret</code></td><td><code>3</code></td><td>Man the front turret of a convoy truck.</td></tr><tr><td><code>MoveTo</code></td><td><code>4</code></td><td>Walk to a world point outside (only while the convoy is stopped).</td></tr><tr><td><code>Attack</code></td><td><code>5</code></td><td>Focus fire on one hostile (PawnOrder.Pawn) or hostile truck (PawnOrder.Truck). A driver chases it and a gunner tracks it while their truck rolls; once it stops they climb out and fight on foot.</td></tr><tr><td><code>DriveTo</code></td><td><code>6</code></td><td>Seated ally driver takes PawnOrder.Truck to a world point (PawnOrder.Target), then drives on as usual.</td></tr><tr><td><code>Follow</code></td><td><code>7</code></td><td>Stay close to PawnOrder.Pawn (the player who gave it), into whatever truck they board.</td></tr><tr><td><code>PickUp</code></td><td><code>8</code></td><td>Walk to a dropped item (PawnOrder.Target: world point, or truck-local when PawnOrder.Truck is set) and pick it up.</td></tr><tr><td><code>FetchModule</code></td><td><code>9</code></td><td>Walk to a module slot and take it. Truck slot: PawnOrder.Truck and PawnOrder.Pawn is the slot. A building: truck -1, pawn packs location, floor and slot.</td></tr><tr><td><code>SwapModule</code></td><td><code>10</code></td><td>Walk to a filled module slot and swap it for the module in hand.</td></tr><tr><td><code>Repair</code></td><td><code>11</code></td><td>Walk up and fix one broken thing. A module: PawnOrder.Pawn is the slot (a building packs location, floor and slot, with PawnOrder.Truck at -1). The truck itself: pawn is -1.</td></tr><tr><td><code>Patrol</code></td><td><code>12</code></td><td>Stroll the way a location NPC does: a spot nearby, a pause, another spot. Quiet while they do it.</td></tr><tr><td><code>Aid</code></td><td><code>13</code></td><td>One pawn tends another. PawnOrder.Pawn is the other one. The healer has PawnOrder.Idle clear and walks into reach, then both hold the spot in PawnOrder.Target (they may still turn). The patient is marked PawnOrder.Idle.</td></tr><tr><td><code>Deliver</code></td><td><code>14</code></td><td>After a pickup, hand the item to PawnOrder.Pawn. PawnOrder.Target X is the backpack slot, or -1 until the pickup lands. Y is how many to hand; 0 means the whole slot.</td></tr></table>
   <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
 </main>
-<script src="../search.js?v=20261104030641"></script>
+<script src="../search.js?v=20261104032444"></script>
 </body>
 </html>
