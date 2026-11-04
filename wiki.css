@@ -127,7 +127,16 @@ details.tech summary { cursor: pointer; color: var(--sand); font: 700 14px var(-
 .quality-block { clear: both; margin-top: 8px; }
 .qualities { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 4px; }
 .qualities i { font-style: normal; font: 700 12px/1.5 var(--mono); letter-spacing: 0.4px; padding: 1px 6px; border: 1px solid currentColor; }
-.qualities i.qrainbow, th.qrainbow { color: var(--bone); border-color: #b56bff; box-shadow: inset 0 -2px 0 #5aa6ff; }
+@keyframes prismatic {
+  0% { color: hsl(0, 100%, 58%); border-color: hsl(0, 100%, 58%); }
+  16% { color: hsl(60, 100%, 46%); border-color: hsl(60, 100%, 46%); }
+  33% { color: hsl(120, 100%, 42%); border-color: hsl(120, 100%, 42%); }
+  50% { color: hsl(180, 100%, 46%); border-color: hsl(180, 100%, 46%); }
+  66% { color: hsl(240, 100%, 62%); border-color: hsl(240, 100%, 62%); }
+  83% { color: hsl(300, 100%, 58%); border-color: hsl(300, 100%, 58%); }
+  100% { color: hsl(360, 100%, 58%); border-color: hsl(360, 100%, 58%); }
+}
+.qualities i.qrainbow, th.qrainbow, td.qrainbow { animation: prismatic 2.4s linear infinite; }
 .qscroll { overflow-x: auto; margin-top: 8px; }
 table.qtable { width: max-content; min-width: 100%; }
 table.qtable th, table.qtable td { width: auto; text-align: right; white-space: nowrap; font-size: 14px; }
