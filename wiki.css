@@ -124,6 +124,15 @@ ul.plain li { padding: 3px 0; font-size: 16px; }
 details.tech { clear: both; margin: 8px 18px 18px; }
 .article details.tech { margin: 16px 0; }
 details.tech summary { cursor: pointer; color: var(--sand); font: 700 14px var(--mono); letter-spacing: 1px; text-transform: uppercase; }
+.quality-block { clear: both; margin-top: 8px; }
+.qualities { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 4px; }
+.qualities i { font-style: normal; font: 700 12px/1.5 var(--mono); letter-spacing: 0.4px; padding: 1px 6px; border: 1px solid currentColor; }
+.qualities i.qrainbow, th.qrainbow { color: var(--bone); border-color: #b56bff; box-shadow: inset 0 -2px 0 #5aa6ff; }
+.qscroll { overflow-x: auto; margin-top: 8px; }
+table.qtable { width: max-content; min-width: 100%; }
+table.qtable th, table.qtable td { width: auto; text-align: right; white-space: nowrap; font-size: 14px; }
+table.qtable th.stat, table.qtable td.stat { text-align: left; position: sticky; left: 0; background: #1c1814; }
+table.qtable th.base, table.qtable td.base { background: rgba(255,128,0,0.1); }
 .index, .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 8px; list-style: none; margin: 0 18px 18px; padding: 0; }
 .index a, .cat { display: flex; flex-direction: column; gap: 4px; min-height: 100%; padding: 8px; border: 1px solid rgba(255,128,0,0.35); background: rgba(0,0,0,0.28); color: var(--bone); text-decoration: none; }
 .index img, .cat img, .ph { display: block; width: 100%; height: 96px; object-fit: contain; image-rendering: pixelated; background: rgba(0,0,0,0.35); }
