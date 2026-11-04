@@ -92,6 +92,11 @@ h1 { position: relative; margin: 0; padding: 12px 18px 12px 36px; background-col
 h1::before { content: ""; position: absolute; left: 0; top: 50%; width: 22px; height: 1px; background: #140e08; }
 h2 { margin: 18px 0 8px; color: var(--brand); font: 700 15px var(--mono); letter-spacing: 1.2px; text-transform: uppercase; }
 .lead { margin: 0 0 14px; font-size: 16px; line-height: 1.55; color: var(--brand); }
+.sheet > .lead { margin: 16px 18px 14px; }
+.sheet > .path { margin: 16px 18px 0; }
+.sheet > h2 { margin-left: 18px; margin-right: 18px; }
+.sheet > ul.plain { margin-left: 18px; margin-right: 18px; }
+.sheet > table { margin-left: 18px; margin-right: 18px; width: calc(100% - 36px); }
 .note, .path { color: var(--brand); }
 .path { font: 13px var(--mono); opacity: 0.75; }
 .article { display: flow-root; padding: 16px 18px 8px; }
@@ -150,6 +155,8 @@ table.qtable th.base, table.qtable td.base { background: rgba(255,128,0,0.1); }
 .index img, .cat img, .ph { display: block; width: 100%; height: 96px; object-fit: contain; image-rendering: pixelated; background: rgba(0,0,0,0.35); }
 .index .meta, .cat small { color: var(--brand); font-size: 14px; }
 .group { margin: 8px 18px 0; color: var(--brand); font: 700 13px var(--mono); letter-spacing: 1.4px; text-transform: uppercase; }
+h2.family { margin: 22px 18px 6px; font-size: 15px; }
+h3.group { margin: 14px 18px 0; font-size: 12px; }
 @media (max-width: 860px) {
   body { grid-template-columns: 1fr; }
   .rail { border-right: none; border-bottom: 1px solid var(--line); }
