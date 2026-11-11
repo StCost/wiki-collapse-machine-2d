@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLAPSE MACHINE 2D Wiki - Rotting wall</title>
+<meta property="og:site_name" content="COLLAPSE MACHINE 2D Wiki">
+<meta property="og:title" content="COLLAPSE MACHINE 2D Wiki - Rotting wall">
+<meta property="og:image" content="../logo.png">
+<link rel="icon" href="../logo.png">
+<link rel="stylesheet" href="../wiki.css?v=20261111000259">
+<script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261111000259";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
+</head>
+<body>
+<header class="top">
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+  <select id="lang" aria-label="Language">
+    <option value="en">EN</option>
+    <option value="ru">RU</option>
+  </select>
+</header>
+<aside class="rail">
+  <a class="brand" href="../index.html"><img src="../logo.png" alt="COLLAPSE MACHINE 2D"><span class="sitename"><span class="en">Wiki</span><span class="ru">Вики</span></span></a>
+  <p><span class="en">Game</span><span class="ru">Игра</span></p><nav><a class="" href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a><a class="" href="../lessons/index.html"><span class="en">Lessons</span><span class="ru">Уроки</span></a><a class="" href="../catalog/pawns.html"><span class="en">Pawns</span><span class="ru">Персонажи</span></a><a class="" href="../catalog/weapons.html"><span class="en">Weapons</span><span class="ru">Оружие</span></a><a class="" href="../catalog/modules.html"><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></a><a class="" href="../catalog/trucks.html"><span class="en">Trucks</span><span class="ru">Грузовики</span></a><a class="" href="../catalog/traits.html"><span class="en">Traits</span><span class="ru">Черты</span></a><a class="" href="../catalog/dialogs.html"><span class="en">Dialogs</span><span class="ru">Диалоги</span></a><a class="" href="../catalog/quests.html"><span class="en">Quests</span><span class="ru">Задания</span></a></nav><div class="devonly"><p><span class="en">Data</span><span class="ru">Данные</span></p><nav><a class="on" href="../catalog/tiles.html"><span class="en">Tiles</span><span class="ru">Плитки</span></a><a class="" href="../catalog/doors.html"><span class="en">Doors</span><span class="ru">Двери</span></a><a class="" href="../catalog/wheels.html"><span class="en">Wheels</span><span class="ru">Колёса</span></a><a class="" href="../catalog/slots.html"><span class="en">Slots</span><span class="ru">Слоты</span></a><a class="" href="../catalog/config.html"><span class="en">World config</span><span class="ru">Настройки мира</span></a><a class="" href="../catalog/variants.html"><span class="en">variants</span><span class="ru">variants</span></a></nav><p><span class="en">Mechanics</span><span class="ru">Механика</span></p><nav><a class="" href="../code/index.html"><span class="en">Mechanics</span><span class="ru">Механика</span></a></nav></div>
+</aside>
+<main class="sheet">
+  <p class="crumb"><a href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a> / <span class="en">Tiles</span><span class="ru">Плитки</span></p>
+  <h1><span class="en">Rotting wall</span><span class="ru">Rotting wall</span></h1>
+  <div class="article"><aside class="infobox"><img class="hero" alt="" src="../media/tiles/rot_wall_straight.png"></aside><div class="prose"><p class="lead"><span class="en">Rotting wall is a Red.</span><span class="ru">Rotting wall: Red.</span></p><h2><span class="en">Related</span><span class="ru">Связанное</span></h2><h3><span class="en">Tiles</span><span class="ru">Плитки</span></h3><p class="links"><a href="../entry/wall.html"><span class="en">Wall</span><span class="ru">Wall</span></a></p><h3><span class="en">variants</span><span class="ru">variants</span></h3><p class="links"><a href="../entry/rot.html"><span class="en">Rotting ruin</span><span class="ru">Rotting ruin</span></a></p><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/tiles/rot_wall_straight.json</span></summary><table><tr><th>Kind</th><td>Red</td></tr><tr><th>Theme</th><td><a href="../entry/rot.html"><span class="en">Rotting ruin</span><span class="ru">Rotting ruin</span></a></td></tr><tr><th>Tags</th><td><a href="../entry/wall.html"><span class="en">Wall</span><span class="ru">Wall</span></a>, Straight</td></tr><tr><th>Connects</th><td>NS</td></tr></table></details></div></div>
+  <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
+</main>
+<script src="../search.js?v=20261111000259"></script>
+</body>
+</html>
