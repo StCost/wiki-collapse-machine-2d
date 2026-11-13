@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLAPSE MACHINE 2D Wiki - HeatSystem</title>
+<meta property="og:site_name" content="COLLAPSE MACHINE 2D Wiki">
+<meta property="og:title" content="COLLAPSE MACHINE 2D Wiki - HeatSystem">
+<meta property="og:image" content="../logo.png">
+<link rel="icon" href="../logo.png">
+<link rel="stylesheet" href="../wiki.css?v=20261113215216">
+<script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261113215216";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
+</head>
+<body>
+<header class="top">
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+  <select id="lang" aria-label="Language">
+    <option value="en">EN</option>
+    <option value="ru">RU</option>
+  </select>
+</header>
+<aside class="rail">
+  <a class="brand" href="../index.html"><img src="../logo.png" alt="COLLAPSE MACHINE 2D"><span class="sitename"><span class="en">Wiki</span><span class="ru">Вики</span></span></a>
+  <p><span class="en">Game</span><span class="ru">Игра</span></p><nav><a class="" href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a><a class="" href="../lessons/index.html"><span class="en">Lessons</span><span class="ru">Уроки</span></a><a class="" href="../catalog/pawns.html"><span class="en">Pawns</span><span class="ru">Персонажи</span></a><a class="" href="../catalog/weapons.html"><span class="en">Weapons</span><span class="ru">Оружие</span></a><a class="" href="../catalog/modules.html"><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></a><a class="" href="../catalog/trucks.html"><span class="en">Trucks</span><span class="ru">Грузовики</span></a><a class="" href="../catalog/traits.html"><span class="en">Traits</span><span class="ru">Черты</span></a><a class="" href="../catalog/dialogs.html"><span class="en">Dialogs</span><span class="ru">Диалоги</span></a><a class="" href="../catalog/quests.html"><span class="en">Quests</span><span class="ru">Задания</span></a></nav><div class="devonly"><p><span class="en">Data</span><span class="ru">Данные</span></p><nav><a class="" href="../catalog/tiles.html"><span class="en">Tiles</span><span class="ru">Плитки</span></a><a class="" href="../catalog/doors.html"><span class="en">Doors</span><span class="ru">Двери</span></a><a class="" href="../catalog/wheels.html"><span class="en">Wheels</span><span class="ru">Колёса</span></a><a class="" href="../catalog/slots.html"><span class="en">Slots</span><span class="ru">Слоты</span></a><a class="" href="../catalog/config.html"><span class="en">World config</span><span class="ru">Настройки мира</span></a><a class="" href="../catalog/sprites.html"><span class="en">Sprite index</span><span class="ru">Спрайты</span></a><a class="" href="../catalog/variants.html"><span class="en">variants</span><span class="ru">variants</span></a></nav><p><span class="en">Mechanics</span><span class="ru">Механика</span></p><nav><a class="on" href="../code/index.html"><span class="en">Mechanics</span><span class="ru">Механика</span></a></nav></div>
+</aside>
+<main class="sheet">
+  <p class="crumb"><a href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a> / <span class="en">Mechanics</span><span class="ru">Механика</span></p>
+  <h1>HeatSystem</h1>
+  <p class="path">src/DustConvoy.Sim/Systems/HeatSystem.cs</p><h2><span class="en">Constants</span><span class="ru">Константы</span></h2><table><tr><th><span class="en">Name</span><span class="ru">Имя</span></th><th><span class="en">Value</span><span class="ru">Значение</span></th><th><span class="en">Note</span><span class="ru">Заметка</span></th></tr><tr><td><code>BurstHold</code></td><td>1f</td><td>Seconds a gun must sit at full heat before it bursts.</td></tr><tr><td><code>HandCapacity</code></td><td>1f</td><td>Hand-gun heat pool at common quality.</td></tr><tr><td><code>VehicleCapacity</code></td><td>4f</td><td>Vehicle-gun heat pool at common quality, in the same units. Much larger than a hand weapon.</td></tr><tr><td><code>LaserGain</code></td><td>0.20f</td><td></td></tr><tr><td><code>LaserCool</code></td><td>0.30f</td><td></td></tr><tr><td><code>PlasmaGain</code></td><td>0.36f</td><td></td></tr><tr><td><code>PlasmaCool</code></td><td>0.24f</td><td></td></tr><tr><td><code>LightningGain</code></td><td>0.55f</td><td></td></tr><tr><td><code>LightningCool</code></td><td>0.20f</td><td></td></tr><tr><td><code>BallisticLightGain</code></td><td>0.45f</td><td></td></tr><tr><td><code>BallisticLightCool</code></td><td>0.55f</td><td></td></tr><tr><td><code>BallisticGain</code></td><td>0.58f</td><td></td></tr><tr><td><code>BallisticCool</code></td><td>0.50f</td><td></td></tr><tr><td><code>BallisticHeavyGain</code></td><td>0.36f</td><td></td></tr><tr><td><code>BallisticHeavyCool</code></td><td>0.48f</td><td></td></tr><tr><td><code>RocketGain</code></td><td>0.90f</td><td></td></tr><tr><td><code>RocketCool</code></td><td>0.42f</td><td></td></tr><tr><td><code>MortarGain</code></td><td>0.80f</td><td></td></tr><tr><td><code>MortarCool</code></td><td>0.45f</td><td></td></tr><tr><td><code>UtilityGain</code></td><td>0.35f</td><td></td></tr><tr><td><code>UtilityCool</code></td><td>0.55f</td><td></td></tr><tr><td><code>MeleeGain</code></td><td>0.40f</td><td></td></tr><tr><td><code>MeleeCool</code></td><td>0.50f</td><td></td></tr><tr><td><code>VehicleEnergyLaserGain</code></td><td>0.80f</td><td></td></tr><tr><td><code>VehicleEnergyLaserCool</code></td><td>0.40f</td><td></td></tr><tr><td><code>VehicleEnergyBeamGain</code></td><td>1.00f</td><td></td></tr><tr><td><code>VehicleEnergyBeamCool</code></td><td>0.38f</td><td></td></tr><tr><td><code>VehicleEnergyLightningGain</code></td><td>1.20f</td><td></td></tr><tr><td><code>VehicleEnergyLightningCool</code></td><td>0.36f</td><td></td></tr><tr><td><code>NpcStop</code></td><td>0.72f</td><td></td></tr><tr><td><code>NpcResume</code></td><td>0.32f</td><td></td></tr><tr><td><code>CarefulStop</code></td><td>0.50f</td><td></td></tr><tr><td><code>CarefulResume</code></td><td>0.18f</td><td></td></tr><tr><td><code>SwitchMargin</code></td><td>1.25f</td><td>A ground gun is only picked up when its score beats the current one by at least this factor.</td></tr><tr><td><code>VehicleBurstDamage</code></td><td>18f</td><td></td></tr><tr><td><code>VehicleEnergyBurstDamage</code></td><td>32f</td><td></td></tr><tr><td><code>VehicleBurstRadius</code></td><td>2.4f</td><td></td></tr><tr><td><code>ClickGap</code></td><td>0.85f</td><td>Keep the fuse and skip cooling across ordinary semi-auto click gaps, not only while the trigger is held.</td></tr><tr><td><code>NearMax</code></td><td>0.98f</td><td>At or above this fraction of capacity the 1-second fuse may run, so a hair under the cap still counts.</td></tr><tr><td><code>PistolShots</code></td><td>400</td><td></td></tr><tr><td><code>RifleShots</code></td><td>300</td><td></td></tr><tr><td><code>AutoShots</code></td><td>200</td><td></td></tr><tr><td><code>HeavyShots</code></td><td>90</td><td></td></tr><tr><td><code>LauncherShots</code></td><td>28</td><td></td></tr><tr><td><code>PistolCool</code></td><td>0.10f</td><td></td></tr><tr><td><code>RifleCool</code></td><td>0.10f</td><td></td></tr><tr><td><code>AutoCool</code></td><td>0.08f</td><td></td></tr><tr><td><code>HeavyCool</code></td><td>0.12f</td><td></td></tr><tr><td><code>LauncherCool</code></td><td>0.15f</td><td></td></tr><tr><td><code>ScrapId</code></td><td><a href="../entry/item_scrap_metal.html"><span class="en">Scrap metal</span><span class="ru">Металлолом</span></a></td><td></td></tr></table>
+  <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
+</main>
+<script src="../search.js?v=20261113215216"></script>
+</body>
+</html>

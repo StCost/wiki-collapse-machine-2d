@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-depth="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLAPSE MACHINE 2D Wiki - ORDER scientist</title>
+<meta property="og:site_name" content="COLLAPSE MACHINE 2D Wiki">
+<meta property="og:title" content="COLLAPSE MACHINE 2D Wiki - ORDER scientist">
+<meta property="og:image" content="../logo.png">
+<link rel="icon" href="../logo.png">
+<link rel="stylesheet" href="../wiki.css?v=20261113215216">
+<script>try{if(localStorage.getItem("wiki-dev")==="1")document.documentElement.dataset.dev="1"}catch(e){}</script>
+<script>
+(function () {
+  var build = "20261113215216";
+  var depth = +document.documentElement.getAttribute("data-depth") || 0;
+  var pre = "";
+  for (var i = 0; i < depth; i++) pre += "../";
+  fetch(pre + "version.txt", { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (t) {
+    t = (t || "").trim();
+    if (!t || t === build) return;
+    try {
+      if (sessionStorage.getItem("wiki-bust") === t) return;
+      sessionStorage.setItem("wiki-bust", t);
+    } catch (e) {}
+    var u = new URL(location.href);
+    u.searchParams.set("v", t);
+    location.replace(u.toString());
+  }).catch(function () {});
+})();
+</script>
+</head>
+<body>
+<header class="top">
+  <form role="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Search" aria-label="Search">
+    <ul class="hits"></ul>
+  </form>
+  <select id="lang" aria-label="Language">
+    <option value="en">EN</option>
+    <option value="ru">RU</option>
+  </select>
+</header>
+<aside class="rail">
+  <a class="brand" href="../index.html"><img src="../logo.png" alt="COLLAPSE MACHINE 2D"><span class="sitename"><span class="en">Wiki</span><span class="ru">Вики</span></span></a>
+  <p><span class="en">Game</span><span class="ru">Игра</span></p><nav><a class="" href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a><a class="" href="../lessons/index.html"><span class="en">Lessons</span><span class="ru">Уроки</span></a><a class="on" href="../catalog/pawns.html"><span class="en">Pawns</span><span class="ru">Персонажи</span></a><a class="" href="../catalog/weapons.html"><span class="en">Weapons</span><span class="ru">Оружие</span></a><a class="" href="../catalog/modules.html"><span class="en">Modules and gear</span><span class="ru">Модули и снаряжение</span></a><a class="" href="../catalog/trucks.html"><span class="en">Trucks</span><span class="ru">Грузовики</span></a><a class="" href="../catalog/traits.html"><span class="en">Traits</span><span class="ru">Черты</span></a><a class="" href="../catalog/dialogs.html"><span class="en">Dialogs</span><span class="ru">Диалоги</span></a><a class="" href="../catalog/quests.html"><span class="en">Quests</span><span class="ru">Задания</span></a></nav><div class="devonly"><p><span class="en">Data</span><span class="ru">Данные</span></p><nav><a class="" href="../catalog/tiles.html"><span class="en">Tiles</span><span class="ru">Плитки</span></a><a class="" href="../catalog/doors.html"><span class="en">Doors</span><span class="ru">Двери</span></a><a class="" href="../catalog/wheels.html"><span class="en">Wheels</span><span class="ru">Колёса</span></a><a class="" href="../catalog/slots.html"><span class="en">Slots</span><span class="ru">Слоты</span></a><a class="" href="../catalog/config.html"><span class="en">World config</span><span class="ru">Настройки мира</span></a><a class="" href="../catalog/sprites.html"><span class="en">Sprite index</span><span class="ru">Спрайты</span></a><a class="" href="../catalog/variants.html"><span class="en">variants</span><span class="ru">variants</span></a></nav><p><span class="en">Mechanics</span><span class="ru">Механика</span></p><nav><a class="" href="../code/index.html"><span class="en">Mechanics</span><span class="ru">Механика</span></a></nav></div>
+</aside>
+<main class="sheet">
+  <p class="crumb"><a href="../index.html"><span class="en">Field manual</span><span class="ru">Справочник</span></a> / <span class="en">Pawns</span><span class="ru">Персонажи</span></p>
+  <h1><span class="en">ORDER scientist</span><span class="ru">Учёный Ордена</span></h1>
+  <div class="article"><aside class="infobox"><img class="hero" alt="" src="../media/portraits/pawn_order_scientist.png"><span class="note"><span class="en">Portrait</span><span class="ru">Портрет</span></span><div class="gallery"><img class="" alt="" src="../media/pawns/pawn_order_scientist/00.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/01.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/02.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/03.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/04.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/05.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/06.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/07.png" loading="lazy"><img class="" alt="" src="../media/pawns/pawn_order_scientist/08.png" loading="lazy"></div><dl class="stats"><div><dt><span class="en">Race</span><span class="ru">Раса</span></dt><dd><span class="en">Human</span><span class="ru">Человек</span></dd></div><div><dt><span class="en">HP</span><span class="ru">ОЗ</span></dt><dd>40</dd></div><div><dt><span class="en">Speed</span><span class="ru">Скорость</span></dt><dd>4.5 m/s</dd></div><div><dt><span class="en">Weapon</span><span class="ru">Оружие</span></dt><dd><a href="../entry/laser_pistol.html"><span class="en">Laser Pistol</span><span class="ru">Лазерный пистолет</span></a></dd></div><div><dt><span class="en">Accuracy</span><span class="ru">Меткость</span></dt><dd>0.8</dd></div><div><dt><span class="en">Bravery</span><span class="ru">Храбрость</span></dt><dd>60</dd></div></dl></aside><div class="prose"><p class="lead"><span class="en">ORDER scientist has 40 HP and walks at 4.5 m/s. Starts with <a href="../entry/laser_pistol.html"><span class="en">Laser Pistol</span><span class="ru">Лазерный пистолет</span></a>.</span><span class="ru">Учёный Ордена: 40 ОЗ, скорость 4.5 м/с. Начинает с <a href="../entry/laser_pistol.html"><span class="en">Laser Pistol</span><span class="ru">Лазерный пистолет</span></a>.</span></p><h2><span class="en">Related</span><span class="ru">Связанное</span></h2><h3><span class="en">Weapons</span><span class="ru">Оружие</span></h3><p class="links"><a href="../entry/shock_dart.html"><span class="en">Shock dart gun</span><span class="ru">Шоковый дротик</span></a></p><details class="tech devonly"><summary><span class="en">Technical data</span><span class="ru">Технические данные</span> <span class="path">content/pawns/pawn_order_scientist.json</span></summary><table><tr><th>Faction</th><td>Order</td></tr><tr><th>Subfaction</th><td>Scientist</td></tr><tr><th>Intelligent</th><td><span class="en">Yes</span><span class="ru">Да</span></td></tr><tr><th>Gore Color</th><td><span class="swatch" style="background:#8a221c"></span>#8a221c</td></tr><tr><th>Radius</th><td>0.25</td></tr><tr><th>Art Scale</th><td>0.5</td></tr><tr><th>Weapons</th><td><a href="../entry/laser_pistol.html"><span class="en">Laser Pistol</span><span class="ru">Лазерный пистолет</span></a>, <a href="../entry/shock_dart.html"><span class="en">Shock dart gun</span><span class="ru">Шоковый дротик</span></a></td></tr><tr><th>Ai</th><td>Crew</td></tr></table></details></div></div>
+  <footer class="foot"><p><span class="en">© Dreaming Saints</span><span class="ru">© Dreaming Saints</span></p><label><input type="checkbox" id="dev"> <span class="en">Developer data</span><span class="ru">Данные разработчика</span></label></footer>
+</main>
+<script src="../search.js?v=20261113215216"></script>
+</body>
+</html>
